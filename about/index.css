@@ -3,13 +3,15 @@ body {
     font-size: 24px /* base font size */
 }
 
-#title-section {
-    padding: 10%;
-    color: black;
-    text-align: center;
+.blurb {
+    padding: 5%;
 }
-#title {
-    max-width: 100%;
+
+a {
+    color: darkslateblue;
+}
+a:hover {
+    color: darkblue;
 }
 
 #link-section {
@@ -28,6 +30,7 @@ body {
     display: block;
 }
 .link:hover {
+    color: white;
     font-weight: bold;
 }
 

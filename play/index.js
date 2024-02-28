@@ -10,6 +10,15 @@ for (let i = 0; i < edit_buttons.length; i++) {
     };
 }
 
+if (document.getElementById("edit-button-6") != null) {
+    document.getElementById("edit-button-6").onclick = function(){
+        show("edit-text-6");
+        hide("change-button-6-2");
+        hide("change-button-6-3");
+        hide("change-button-6-4");
+    };
+}
+
 if (document.getElementById("change-button-1") != null) {
     document.getElementById("change-button-1").onclick = function(){
         hide("letter-text-1");
@@ -89,14 +98,74 @@ if (document.getElementById("change-button-5-2")) {
 
 if (document.getElementById("send-button")) {
     document.getElementById("send-button").onclick = function(){
-        // TODO
+        hide("letter");
+        show("envelope");
+    };
+}
+
+if (document.getElementById("change-button-6-1")) {
+    document.getElementById("change-button-6-1").onclick = function(){
+        show("envelope-text-6-1");
+        show("change-button-6-2");
+        show("change-button-6-3");
+        show("change-button-6-4");
+        document.getElementById("change-button-6-1").disabled = true;
+    };
+}
+
+if (document.getElementById("change-button-6-2")) {
+    document.getElementById("change-button-6-2").onclick = function(){
+        console.log(isHidden("envelope-text-6-3"));
+        document.getElementById("change-button-6-2").disabled = true;
+        if (isHidden("envelope-text-6-3")) {
+            show("envelope-text-6-2");
+        }
+        else {
+            show("envelope-text-6-2-alternate");
+        }
+    };
+}
+
+if (document.getElementById("change-button-6-3")) {
+    document.getElementById("change-button-6-3").onclick = function(){
+        show("envelope-text-6-3");
+        document.getElementById("change-button-6-3").disabled = true;
+    };
+}
+
+if (document.getElementById("change-button-6-4")) {
+    document.getElementById("change-button-6-4").onclick = function(){
+        hide("edit-button-6");
+        hide("edit-text-6");
+        show("envelope-text-6-4");
+        if (isHidden("envelope-text-6-3")) {
+            showWithoutBlock("envelope-text-6-6");
+        }
+        else {
+            showWithoutBlock("envelope-text-6-5");
+        }
+        show("fin-text");
     };
 }
 
 function hide(id) {
-    document.getElementById(id).style.display = "none";
+    let element = document.getElementById(id);
+    element.style.display = "none";
 }
 
 function show(id) {
-    document.getElementById(id).style.display = "block";
+    let element = document.getElementById(id);
+    element.style.display = "block";
+    element.hidden = false;
+}
+
+function showWithoutBlock(id) {
+    let element = document.getElementById(id);
+    element.hidden = false;
+}
+
+function isHidden(id) {
+    let element = document.getElementById(id);
+    console.log(element);
+    return (window.getComputedStyle(element).display === "none");
 }

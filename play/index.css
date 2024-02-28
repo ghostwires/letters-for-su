@@ -1,0 +1,125 @@
+@font-face {
+    font-family: Atkinson;
+    src: url(~/projects/letters-for-su/fonts/Atkinson-Hyperlegible-Regular-102.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Atkinson;
+    src: url(~/projects/letters-for-su/fonts/Atkinson-Hyperlegible-Italic-102.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Atkinson;
+    src: url(~/projects/letters-for-su/fonts/Atkinson-Hyperlegible-Bold-102.ttf);
+    font-weight: bold;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Atkinson;
+    src: url(~/projects/letters-for-su/fonts/Atkinson-Hyperlegible-BoldItalic-102.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+body {
+    background-color: darkslateblue;
+    padding: 5%;
+    font-family: Atkinson, serif;
+    font-size: 24px; /* base font size */
+}
+
+.letter {
+    min-height: 100%;
+    padding: 2%;
+    background-color: lavender;
+}
+.envelope {
+    min-height: 100%;
+    padding: 2%;
+    background-color: white;
+}
+
+.letter-text {
+    font-size: 1em;
+}
+.envelope-text {
+    font-size: 1em;
+}
+.edit-button {
+    font-size: 0.9em;
+    font-family: Atkinson, serif;
+}
+.edit-text {
+    font-size: 0.9em;
+    font-style: italic;
+    border: dashed 1px;
+    padding: 1%;
+}
+.edit-text > p:first-child {
+    margin-top: 0.3em;
+}
+.edit-text > .change-button:first-child {
+    margin-top: 0em;
+}
+.change-button {
+    font-size: 0.9em;
+    font-family: Atkinson, serif;
+    display: block;
+    margin-top: 0.5em;
+    line-height: 1.2em;
+}
+#send-button {
+    font-size: 0.9em;
+    padding: 1%;
+    font-family: Atkinson, serif;
+}
+#fin-text {
+    font-size: 1.1em;
+    text-align: center;
+}
+#fin-text a {
+    color: black;
+    text-decoration: none;
+    border: solid 1px;
+    border-radius: 5px;
+    padding: 0.2em;
+}
+#fin-text a:hover {
+    color: black;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+    .letter {
+        padding: 5%;
+    }
+    .envelope {
+        padding: 5%;
+    }
+    .letter-text {
+        font-size: 0.9em;
+    }
+    .envelope-text {
+        font-size: 0.9em;
+    }
+    .edit-button {
+        font-size: 0.8em;
+    }
+    .edit-text {
+        font-size: 0.8em;
+    }
+    .change-button {
+        font-size: 0.8em;
+    }
+    #send-button {
+        font-size: 0.8em;
+    }
+    #fin-text {
+        font-size: 1em;
+    }
+}
